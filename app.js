@@ -10,18 +10,14 @@ const app = express();
 // Levantando el Servidor en el puerto 3030
 app.listen(3030, () => console.log('Server running in 3030 port'));
 
-// Leyendo y parseando (en array) el contenido de heroes.json
-const heroes = JSON.parse(fs.readFileSync(__dirname + '/data/heroes.json', 'utf-8'));
-
 const rutaMain = ('./routes/main.js')
+const rutaHeroes = ('/routes/heroes.js')
 
 // Ruta Raíz / ➝ Home
 app.get('/', rutaMain)
 
 // Ruta /heroes ➝ se envía todo el array y Express lo parsea para el browser como JSON :D
-app.get('/heroes', (req,res) => {
-	res.send(heroes);
-});
+app.get('/heroes', rutaHeroes)
 
 // Ruta /heroes/n ➝ se envía el nombre y profesión del héroe solicitado
 app.get('/heroes/detalle/:id', (req,res) => {
