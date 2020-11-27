@@ -17,7 +17,8 @@ app.use ('/', rutaMain)
 app.use ('/heroes/detalle/:id', rutaHeroes)
 
 // Ruta Créditos
-app.use ('/heroes/main.js',rutaheroes)
+app.use ('/heroes/main.js',rutaheroes) 
+
 // Ruta... ¿Pára qué sirve esto?
 app.get('*', (req, res) => {
 	res.status(404).send('404 not found. <br> ¡Houston, poseemos problemas!');
