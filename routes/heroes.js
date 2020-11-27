@@ -5,8 +5,8 @@ const heroesController = require ('../controller.js/heroesController')
 /* app.get('/heroes', (req,res) => {
 	res.send(heroes);
 }); */
-
-router.get ('/heroes/detalle/:id', heroesController.detalle)
+router.get('/',heroesController.mostrarJSON)
+router.get('/detalle/:id', heroesController.detalle)
 
 // Ruta /heroes/n/bio ➝ se envía la bio del héroe solicitado
 app.get('/heroes/bio/:id/:ok?', (req, res) => {
@@ -32,4 +32,4 @@ app.get('/heroes/bio/:id/:ok?', (req, res) => {
 
 
 
-module.export= router
+module.exports= router
