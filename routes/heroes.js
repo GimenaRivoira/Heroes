@@ -2,26 +2,11 @@ const express =require('express');
 const router =express.Router();
 const heroesController = require ('../controller.js/heroesController')
 // Ruta /heroes ➝ se envía todo el array y Express lo parsea para el browser como JSON :D
-app.get('/heroes', (req,res) => {
+/* app.get('/heroes', (req,res) => {
 	res.send(heroes);
-});
+}); */
 
-// Ruta /heroes/n ➝ se envía el nombre y profesión del héroe solicitado
-app.get('/heroes/detalle/:id', (req,res) => {
-	// Acá lo primero será encontrar al héroe que corresponda
-	let heroe = heroes.filter(heroe => {
-		return heroe.id == req.params.id
-	});
-	
-	if(heroe[0] == undefined){
-		res.send('Heroe no encontrado')
-	}else{
-		res.send(`Hola, mi nombre es ${heroe[0].nombre} y soy ${heroe[0].profesion}`)
-	}
-	
-	// Si se encuentra al héroe se envía el nombre y su profesión
-	// Si NO se encuentra se envía el mensaje de no encontrado
-});
+router.get ('/heroes/detalle/:id', heroesController.detalle)
 
 // Ruta /heroes/n/bio ➝ se envía la bio del héroe solicitado
 app.get('/heroes/bio/:id/:ok?', (req, res) => {
