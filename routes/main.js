@@ -1,6 +1,6 @@
 const express =require('express');
 const router =express.Router();
-const mainController = require('../../carpeta255/controllers/mainController');
+const mainController = require('../../Heroes/controllers/mainController');
 
 
  
