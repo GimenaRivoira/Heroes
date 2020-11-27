@@ -1,6 +1,6 @@
 const express =require('express');
 const router =express.Router();
-const mainController = require('../../Heroes/controllers/mainController');
+const mainController = require('../controllers/mainController');
 
 
  
@@ -10,4 +10,4 @@ router.get('/',mainController.index);
 // Ruta Créditos
 router.get('/creditos',mainController.creditos)
 
-module.export= router
+module.exports= router

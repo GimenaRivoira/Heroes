@@ -22,6 +22,3 @@ app.use ('/heroes', rutaHeroes)
 app.get('*', (req, res) => {
 	res.status(404).send('404 not found. <br> ¡Houston, poseemos problemas!');
 });
-
-
-module.export= router
