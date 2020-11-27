@@ -11,10 +11,10 @@ const app = express();
 app.listen(3030, () => console.log('Server running in 3030 port'));
 
 const rutaMain = ('./routes/main.js')
-const rutaHeroes = ('/routes/heroes.js')
+const rutaHeroes = ('./routes/heroes.js')
 
-app.use ('/', rutaMain)
-app.use ('/heroes', rutaHeroes)
+app.use('/', rutaMain)
+app.use('/heroes', rutaHeroes)
 
 // Ruta Créditos
 
