@@ -7,5 +7,7 @@ const mainController = require('../../carpeta255/controllers/mainController');
 // Ruta Raíz / ➝ Home
 router.get('/',mainController.index);
 
+// Ruta Créditos
+router.get('/creditos',mainController.creditos)
 
 module.export= router
