@@ -10,8 +10,8 @@ const app = express();
 // Levantando el Servidor en el puerto 3030
 app.listen(3030, () => console.log('Server running in 3030 port'));
 
-const rutaMain = ('./routes/main.js')
-const rutaHeroes = ('./routes/heroes.js')
+const rutaMain = require ('./routes/main.js')
+const rutaHeroes = require ('./routes/heroes.js')
 
 app.use('/', rutaMain)
 app.use('/heroes', rutaHeroes)
