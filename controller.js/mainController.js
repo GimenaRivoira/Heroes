@@ -1,8 +1,6 @@
-const express = require ('express')
-const app = express()
-
 module.exports = {
-    index : (req, res) => {
+    index:(req,res)=>{
+
         res.send('Ni Superman,Iron Man o la Mujer Maravilla son tan importantes cómo las y los Heros de carne y hueso que encontrarásen este sitio.Espramos que ellas y ells te sirvan como inspitación para poder cumplir tus objetivos.Recuerda:¡nunca pares de creer en ti!')
     }
 }
